@@ -1,17 +1,24 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { HomePageModule } from "./pages/home/home-page.module";
+import { RootModule } from "./root/root.module";
+import { NotFoundComponent } from "./root/pages/not-found/not-found.component";
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => HomePageModule
+    loadChildren: () => RootModule
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    RootModule,
+    NotFoundComponent
   ],
 })
 export class AppRoutingModule {}

@@ -1,0 +1,58 @@
+<footer class='py-4 bg-black text-white min-h-[25vh] flex flex-col justify-between px-2 md:px-12 lg:px-24'>
+  <div class='grid grid-cols-1 sm:grid-cols-2'>
+    <div class='flex flex-col justify-between h-full mb-3 sm:mb-0'>
+      <div class=''>
+        <h2 class='text-3xl'>ShCode-Blog</h2>
+        <p class='w-2/3 italic'>
+          Ten blog ma na celu pomóc osobą chętynm nauki programowania. Mam nadzieję, że spełni on swoje zadanie!
+        </p>
+      </div>
+    </div>
+    <div class='flex flex-col items-end justify-between'>
+      <div class='mb-5 text-right'>
+        <p class='text-xl mb-3'>Znalazłeś jakiś błąd? Wyślij maila klilając poniżej</p>
+        <a href='mailto:daniel.miliczek77@gmail.com' class='bg-white text-black text-lg rounded-md px-4 py-2'>
+          Wyślij wiadomość
+        </a>
+      </div>
+      <div class='mb-3 w-full md:w-2/3 xl:w-1/3'>
+        <ul class='flex justify-end mb-3 sm:mb-0'>
+          <li>
+            <a 
+              href='https://github.com/ShadowBlack77'
+              class='w-[40px] h-[40px] rounded-full bg-white/20 flex justify-center items-center me-2'
+              aria-label="GitHub"
+            >
+              <i class="bi bi-github"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href='https://www.linkedin.com/in/daniel-miliczek-329521279'
+              class='w-[40px] h-[40px] rounded-full bg-white/20 flex justify-center items-center me-2'
+              aria-label="LinkedIn"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a
+                href='mailto:daniel.miliczek77@gmail.com'
+                class='w-[40px] h-[40px] rounded-full bg-white/20 flex justify-center items-center'
+                aria-label="Mail"
+            >
+            <i class="bi bi-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>  
+  <div class='flex-none sm:flex sm:text-center w-full justify-center'>
+    <p class='me-1'>Privacy Policy |</p>
+    <p class='me-1'>Terms of Service |</p>
+    <p class='flex items-center'>
+      <i class="bi bi-c-circle"></i> {{ currentDate().getFullYear() }} ShadowBlack77  All rights reserverd
+    </p>
+  </div>
+</footer>

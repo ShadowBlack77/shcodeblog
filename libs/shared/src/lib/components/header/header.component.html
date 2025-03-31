@@ -1,0 +1,20 @@
+<header class="sticky top-0 left-0 z-30">
+  <div class="bg-black text-white flex justify-between items-center py-2 z-20 px-2 md:px-12 lg:px-24">
+    <div>
+      <a routerLink="/">
+        <h1 class="text-xl">ShCode-Blog</h1>
+      </a>
+    </div>
+    <nav id="nav" class="flex items-center">
+      <ul class="list-none hidden sm:flex">
+        <li class="me-3">
+          <a routerLink="/">Home</a>
+        </li>
+        <li class="me-3">
+          <a routerLink="/about">About</a>
+        </li>
+        <ng-content />
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@shcodeblog/core/environment": ["libs/core/environment/src/index.ts"]
+      "@shcodeblog/core/environment": ["libs/core/environment/src/index.ts"],
+      "@shcodeblog/shared": ["libs/shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
