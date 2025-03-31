@@ -1,0 +1,4 @@
+src/assets/secret/
+dist/
+frontend-dist/
+.env.local
