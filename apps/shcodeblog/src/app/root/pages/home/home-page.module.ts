@@ -1,6 +1,8 @@
 import { NgModule } from "@angular/core";
 import { HomePageComponent } from "./home-page.component";
 import { RouterModule, Routes } from "@angular/router";
+import { CategoryButtonsModule, FeaturedSectionModule, PostFeaturedListSectionModule, PostListSectionModule } from '@shcodeblog/blog';
+import { CommonModule } from "@angular/common";
 
 const routes: Routes = [
   {
@@ -12,7 +14,12 @@ const routes: Routes = [
 @NgModule({
   declarations: [HomePageComponent],
   imports: [
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    CommonModule,
+    PostListSectionModule,
+    PostFeaturedListSectionModule,
+    FeaturedSectionModule,
+    CategoryButtonsModule
   ]
 })
 export class HomePageModule {}

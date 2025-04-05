@@ -1,0 +1,46 @@
+<div class="flex justify-center py-4 min-h-screen">
+  @if (post(); as post) {
+    <div class="w-1/2">
+      <div class="mb-2">
+        <h2 class="text-3xl mb-2">{{ post.title }}</h2>
+        <p class="mb-1">
+          Technologia: <span class="italic text-gray-600">{{ post.category }}</span>
+        </p>
+        <div class="flex items-center my-4">
+          <div class="me-4">
+            <img 
+              [ngSrc]="post.authorImage" 
+              alt="Author Image" 
+              width="48" 
+              height="48" 
+              priority 
+              class="rounded-full"
+            />
+          </div>
+          <div>
+            <h3 class="font-bold text-xl">{{ post.author }}</h3>
+            <p>{{ post.readTime }} read | {{ getPostDate(post.createdAt) }}</p>
+          </div>
+        </div>
+        <ng-content />
+      </div>
+      <div class="mb-8">
+        <p class='text-xl italic underline'>{{ post.description }}</p>
+      </div>
+      @for (contentSegment of post.contentSegments; track contentSegment.id) {
+        @switch (contentSegment.type) {
+          @case ('heading') {
+            <h2 class="text-2xl mb-2">{{ contentSegment.content }}</h2>
+          }
+          @case ('text') {
+            <p class="mb-3 text-justify">{{ contentSegment.content }}</p>
+          }
+          @case ('code') {
+            <p>{{ contentSegment.content }}</p>
+            <pre class="bg-black/10 rounded-md py-2">{{ contentSegment.code }}</pre>
+          }
+        }
+      }
+    </div>
+  }
+  </div>

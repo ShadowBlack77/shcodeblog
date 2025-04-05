@@ -1,0 +1,24 @@
+<div class="flex justify-center items-center h-screen px-6">
+  <div class="w-full sm:w-1/2 lg:w-1/4">
+    <div class="mb-3">
+      <h2 class="text-center text-3xl">Zaloguj Się</h2>
+    </div>
+    <div class="mb-3">
+      <lib-sign-in-form />
+    </div>
+    <div class="flex justify-between mb-3">
+      <lib-github-sign-in-button class="w-1/2 me-2" />
+      <lib-google-sign-in-button class="w-1/2" />
+    </div>
+    <div class="mb-1">
+      <p>
+        <a routerLink="/auth/sign-up">Nie masz jeszcze konta? Kliknij tutaj!</a>
+      </p>
+    </div>
+    <div>
+      <p>
+        <a routerLink="/auth/reset-password">Zapomniałeś hasła? Kliknij tutaj!</a>
+      </p>
+    </div>
+  </div>
+</div>

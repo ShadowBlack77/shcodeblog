@@ -1,0 +1,21 @@
+<div class="flex items-center">
+  @if (renderLikeButton()) {
+    <button (click)="handleClickLike()" aria-label="Like" class="flex items-center">
+      <i class="bi bi-hand-thumbs-up-fill text-2xl p-0 m-0"></i>
+    </button>
+  } @else {
+    <button (click)="handleClickLike()" aria-label="Like" class="flex items-center">
+      <i class="bi bi-hand-thumbs-up text-2xl p-0 m-0"></i>
+    </button>
+  }
+  <span class="mx-2 text-xl">|</span>
+  @if (renderSaveButton()) {
+    <button (click)="handleClickSave()" aria-label="Save" class="flex items-center">
+      <i class="bi bi-heart-fill text-2xl p-0 m-0"></i>
+    </button>
+  } @else {
+    <button (click)="handleClickSave()" aria-label="Save" class="flex items-center">
+      <i class="bi bi-heart text-2xl p-0 m-0"></i>
+    </button>
+  }
+</div>

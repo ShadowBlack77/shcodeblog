@@ -1,0 +1,68 @@
+<form [formGroup]="signInForm" (submit)="onSubmit()">
+  <div class="mb-3">
+    @if (formError()) {
+      <div class="mb-2">
+        <p class="text-red-700 italic mt-1">{{ formError() }}</p>
+      </div>
+    }
+    <label for="email" class="block mb-1">Email</label>
+    <input 
+      type="email"
+      name="email"
+      id="email"
+      formControlName="email"
+      placeholder="john@example.com"
+      autocomplete="off"
+      class="w-full border rounded-md px-2 py-1.5"
+    >
+    @if (signInForm.controls['email'].invalid && signInForm.controls['email'].touched) {
+      @if (signInForm.controls['email'].errors?.['required']) {
+        <div>
+          <p class="ms-2 text-red-700 italic mt-1">*Pole jest wymagane</p>
+        </div>
+      }
+
+      @if (signInForm.controls['email'].errors?.['email']) {
+        <div>
+          <p class="ms-2 text-red-700 italic mt-1">*Niepoprawny email</p>
+        </div>
+      }
+    }
+  </div>
+  <div class="mb-3">
+    <label for="password" class="block mb-1">Hasło</label>
+    <input 
+      type="password"
+      name="password"
+      id="password"
+      formControlName="password"
+      placeholder="********"
+      autocomplete="off"
+      class="w-full border rounded-md px-2 py-1.5"
+    >
+    @if (signInForm.controls['password'].invalid && signInForm.controls['password'].touched) {
+      @if (signInForm.controls['password'].errors?.['required']) {
+        <div>
+          <p class="ms-2 text-red-700 italic mt-1">*Pole jest wymagane</p>
+        </div>
+      }
+    }
+  </div>
+  <div>
+    <button 
+      type="submit"
+      [disabled]="isSubmitting()"
+      class="text-white rounded-md px-4 py-1.5 w-full text-2xl  transition-opacity ease-in-out"
+      [ngClass]="{
+        'cursor-default bg-black/80': isSubmitting(),
+        'cursor-pointer bg-black hover:bg-black/90': !isSubmitting()
+      }"
+    >
+      @if (isSubmitting()) {
+        <div class="inline-block h-5 w-5 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white" role="status"></div>
+      } @else {
+        <span>Zaloguj</span>
+      }
+    </button>
+  </div>
+</form>

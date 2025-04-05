@@ -1,0 +1,48 @@
+<div id="post-list" class='my-4 px-2 md:px-12 lg:px-24'>
+  <nav class="flex flex-col sm:flex-row justify-between">
+    <ng-content />
+    <div>
+      <label for="page-size" class="me-2">Ilość elementów</label>
+      <select name="page-size" id="page-size">
+        <option value="10">10</option>
+        <option value="5">5</option>
+        <option value="1">1</option>
+      </select>
+    </div>
+  </nav>
+  <div class="my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 min-h-[50vh]">
+    @for (post of posts$(); track $index) {
+      <a [routerLink]="['/posts', post.id]" (click)="handlePostClick()">
+        <div class="w-full">
+          <div class="relative mb-2">
+            <img [ngSrc]="post.mainImagePreview" [alt]="post.title" width="600" height="400" priority class='rounded-md object-cover' />
+            <span class="bg-black text-white text-sm rounded-md px-2 py-0.5 my-2 block w-[100px] text-center">{{ post.category }}</span>
+          </div>
+          <div>
+            <h2 class="text-2xl">{{ post.title }}</h2>
+            <p>{{ post.description }}</p>
+          </div>
+        </div>
+      </a>
+    }
+  </div>
+  <div class="flex items-center justify-center">
+    <div>
+      <button (click)="prev()" aria-label="previous page">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+        </svg>        
+      </button>
+    </div>
+    <div class="mx-4">
+      <p>{{ currentPage() }}</p>
+    </div>
+    <div>
+      <button (click)="next()" aria-label="next page">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+        </svg>        
+      </button>
+    </div>
+  </div>
+</div>

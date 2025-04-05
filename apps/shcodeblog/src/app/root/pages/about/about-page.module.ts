@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { AboutPageComponent } from "./about-page.component";
 import { RouterModule, Routes } from "@angular/router";
+import { NgOptimizedImage } from "@angular/common";
 
 const routes: Routes = [
   {
@@ -12,7 +13,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [AboutPageComponent],
   imports: [
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    NgOptimizedImage
   ],
 })
 export class AboutPageModule {}

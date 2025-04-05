@@ -1,4 +1,4 @@
-<header class="sticky top-0 left-0 z-30">
+<header>
   <div class="bg-black text-white flex justify-between items-center py-2 z-20 px-2 md:px-12 lg:px-24">
     <div>
       <a routerLink="/">
@@ -6,15 +6,18 @@
       </a>
     </div>
     <nav id="nav" class="flex items-center">
-      <ul class="list-none hidden sm:flex">
+      <ul class="list-none hidden sm:flex items-center">
         <li class="me-3">
-          <a routerLink="/">Home</a>
+          <a routerLink="/">Strona Główna</a>
         </li>
         <li class="me-3">
-          <a routerLink="/about">About</a>
+          <a routerLink="/about">O Mnie</a>
         </li>
         <ng-content />
       </ul>
+      <button class="relative sm:hidden " aria-label="open menu" (click)="toggleMenu()">
+        <i class="bi bi-list text-white text-3xl"></i>
+      </button>
     </nav>
   </div>
 </header>

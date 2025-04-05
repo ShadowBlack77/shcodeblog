@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { ProfilePageComponent } from "./profile-page.component";
 import { RouterModule, Routes } from "@angular/router";
+import { UserProfileModule } from "@shcodeblog/auth";
 
 const routes: Routes = [
   {
@@ -12,7 +13,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [ProfilePageComponent],
   imports: [
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    UserProfileModule
   ]
 })
 export class ProfilePageModule {}

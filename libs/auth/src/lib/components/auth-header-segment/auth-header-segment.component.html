@@ -1,0 +1,14 @@
+@if (user(); as user) {
+  <ul class="block sm:flex items-center">
+    <li class="mb-2 sm:me-2 sm:mb-0">
+      <a routerLink="/profile" (click)="handleClick()">Profil</a>
+    </li>
+    <li>
+      <a routerLink="/" (click)="signOut()">Wyloguj</a>
+    </li>
+  </ul>
+} @else {
+  <li class="mb-2 sm:me-2 sm:mb-0">
+    <a routerLink="/auth/sign-in" (click)="handleClick()">Zaloguj</a>
+  </li>
+}

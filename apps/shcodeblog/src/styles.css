@@ -3,3 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+  background-color: black;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(49, 49, 49);
+}

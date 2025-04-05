@@ -1,0 +1,8 @@
+@for (category of allCategories$(); track $index) {
+  <button 
+    (click)="selectedCategory(category.name.toLowerCase())"
+    class="me-2 bg-black text-white rounded-md px-2 py-0.5 text-center cursor-pointer mb-2 sm:mb-0"
+  >
+    {{ category.name === 'cs' ? 'C#' : category.name }}
+  </button>
+}

@@ -1,0 +1,15 @@
+<lib-selected-post 
+  [postId]="postId()" 
+  [inputUserLike]="userLike()"
+  [inputUserSave]="userSave()"
+  (outputLikedBy)="handleLikedBy($event)" 
+  (outputSavedBy)="handleSavedBy($event)"
+>
+  <lib-user-post-button-actions 
+    [likedBy]="likedBy()" 
+    [savedBy]="savedBy()" 
+    [postId]="postId()!" 
+    (outputLikeEvent)="handleLikeEvent($event)" 
+    (outputSaveEvent)="handleSaveEvent($event)"  
+  />
+</lib-selected-post>

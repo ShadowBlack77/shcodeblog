@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@shcodeblog/auth": ["libs/auth/src/index.ts"],
       "@shcodeblog/core/environment": ["libs/core/environment/src/index.ts"],
+      "@shcodeblog/core/tokens": ["libs/core/tokens/src/index.ts"],
+      "@shcodeblog/blog": ["libs/blog/src/index.ts"],
       "@shcodeblog/shared": ["libs/shared/src/index.ts"]
     }
   },

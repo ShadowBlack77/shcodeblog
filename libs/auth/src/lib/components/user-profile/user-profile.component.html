@@ -1,0 +1,12 @@
+<div id="profile" class="flex flex-col items-center justify-center gap-4 min-h-[75vh]">
+  @if (user(); as user) {
+    <div class="text-center">
+      <h2 class="text-3xl ms-2">{{ user.displayName }}</h2>
+      <p>{{ user.email }}</p>
+    </div>
+    <div>
+      <p>Polubione posty: {{ user.likedPosts.length }}</p>
+      <p>Zapisane posty: {{ user.savedPosts.length }}</p>
+    </div>
+  }
+</div>

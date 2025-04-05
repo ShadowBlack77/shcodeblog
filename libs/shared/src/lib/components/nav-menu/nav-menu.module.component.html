@@ -1,0 +1,15 @@
+<div class="absolute top-[52px] w-full opacity-0 -z-30" id="nav-menu">
+  <div class="bg-black text-white flex justify-between items-center py-2 z-20 px-2 md:px-12 lg:px-24">
+    <nav id="nav" class="flex items-center px-4">
+      <ul class="list-none">
+        <li class="mb-3">
+          <a routerLink="/" (click)="handleClick()">Strona Główna</a>
+        </li>
+        <li class="mb-3">
+          <a routerLink="/about" (click)="handleClick()">O Mnie</a>
+        </li>
+        <ng-content />
+      </ul>
+    </nav>
+  </div>
+</div>

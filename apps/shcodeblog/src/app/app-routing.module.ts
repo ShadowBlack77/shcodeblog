@@ -1,12 +1,11 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { RootModule } from "./root/root.module";
 import { NotFoundComponent } from "./root/pages/not-found/not-found.component";
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => RootModule
+    loadChildren: () => import('./root/root.module').then(m => m.RootModule)
   },
   {
     path: '**',
@@ -17,8 +16,8 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes),
-    RootModule,
     NotFoundComponent
   ],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {}

@@ -1,1 +1,9 @@
-<h1 class="underline">Home</h1>
+<lib-post-featured-list-section />
+<div id="post-list-header" class='py-2 px-2 md:px-12 lg:px-24'>
+  <h2 class='text-2xl font-medium'>Lista postów</h2>
+  <p>Tutaj możesz znaleźć coś dla siebie...</p>
+</div>
+<lib-post-list-section [selectedCategory]="selectedCategory()">
+  <lib-category-buttons (changeCategory)="handleCategoryChange($event)"/>
+</lib-post-list-section>
+<lib-featued-section />
