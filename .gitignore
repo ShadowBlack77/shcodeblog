@@ -42,3 +42,4 @@ Thumbs.db
 .nx/workspace-data
 
 .angular
+apps/api/src/assets/secrets/shcode-blog-firebase-adminsdk-fbsvc-c3dcd90665.json
