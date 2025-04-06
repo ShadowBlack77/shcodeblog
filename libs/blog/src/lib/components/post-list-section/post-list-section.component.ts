@@ -6,6 +6,7 @@ import { Post } from "../../models/post/post.model";
 import { toSignal } from "@angular/core/rxjs-interop";
 import { PostActions } from "../../store/post/post.actions";
 import { WINDOW_TOKEN, WindowToken } from '@shcodeblog/core/tokens';
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'lib-post-list-section',
@@ -36,6 +37,15 @@ export class PostListSectionComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    gsap.fromTo('#post-list', {
+      opacity: 0
+    }, {
+      opacity: 1,
+      duration: 0.5,
+      delay: 0.25,
+      ease: 'power2.inOut'
+    })
+
     this._postStore.select(selectPostsList).pipe(
       takeUntil(this._destroy$),
       map((posts) => {
