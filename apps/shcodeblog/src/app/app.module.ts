@@ -31,8 +31,6 @@ import { WINDOW_TOKEN } from '@shcodeblog/core/tokens';
   bootstrap: [AppPageComponent],
   providers: [
     provideHttpClient(withInterceptorsFromDi()),
-    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-    provideAuth(() =>  getAuth()),
     {
       provide: ENV_CONFIG,
       useValue: {
