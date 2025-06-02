@@ -27,7 +27,7 @@ Responsive portfolio created with Angular and Bootstrap. Contains information ab
 - ✅ Advanced architecture of appliaction (Frontend and Backend)
 
 ## 🌐 Demo
-- 🔗 [https://shcodeblog.onrender.com/](https://shcodeblog.onrender.com/)
+- 🔗 [https://shcodeblog.onrender.com/#/](https://shcodeblog.onrender.com/#/)
 
 ## 🧠 Author
 - Daniel Miliczek
@@ -39,4 +39,4 @@ Responsive portfolio created with Angular and Bootstrap. Contains information ab
 ![Features](./assets/screenshots/features.png)
 ![About](./assets/screenshots/about.png)
 ![Login](./assets/screenshots/loginpage.png)
-
+![Post](./assets/screenshots/postpage.png)

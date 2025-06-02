@@ -1,6 +1,6 @@
-<div class="flex justify-center py-4 min-h-screen">
+<div class="flex justify-center py-4 min-h-screen px-2 md:px-12 lg:px-24">
   @if (post(); as post) {
-    <div class="w-1/2">
+    <div class="w-full lg:w-1/2">
       <div class="mb-2">
         <h2 class="text-3xl mb-2">{{ post.title }}</h2>
         <p class="mb-1">
@@ -36,8 +36,10 @@
             <p class="mb-3 text-justify">{{ contentSegment.content }}</p>
           }
           @case ('code') {
-            <p>{{ contentSegment.content }}</p>
-            <pre class="bg-black/10 rounded-md py-2">{{ contentSegment.code }}</pre>
+            <div class="mb-3">
+              <p class="mb-2">{{ contentSegment.content }}</p>
+              <pre class="bg-black/10 rounded-md p-2 overflow-x-auto">{{ contentSegment.code }}</pre>
+            </div>
           }
         }
       }

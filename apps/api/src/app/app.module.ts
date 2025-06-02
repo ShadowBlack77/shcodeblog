@@ -25,7 +25,7 @@ import { ServeStaticModule } from '@nestjs/serve-static';
       isGlobal: true
     }),
     FirebaseModule.forRoot({
-      googleApplicationCredential: join(__dirname, 'assets/secrets/shcode-blog-firebase-adminsdk-fbsvc-c3dcd90665.json')
+      googleApplicationCredential: join(__dirname, `assets/secrets/${process.env.FIREBASE_CONFIG_FILE}`)
     }),
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '../shcodeblog/browser'),
