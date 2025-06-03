@@ -1,6 +1,6 @@
-# 💻 Fridaymake-up
+# 💻 ShCodeBlog
 
-Responsive portfolio created with Angular and Bootstrap. Contains information about my skills, experience, projects and the possibility of contacting me.
+My personal blog, where I plan to post programming-related posts in the future.
 
 ## 🛠️ Technologies
 
